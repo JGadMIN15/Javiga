@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0e0e0e;
+    color: #f0ece0;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 300;
+}
+
+/* ═══════════════════════════
+   NAV
+═══════════════════════════ */
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #111111;
+    border-bottom: 2px solid #e8c84a;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.menu-top {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 32px;
+}
+
+#logo_principal {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #e8c84a;
+    flex-shrink: 0;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e8c84a;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+#logo_principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#titulo {
+    display: flex;
+    align-items: center;
+}
+
+#titulo img {
+    width: 320px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #2a2a2a;
+    padding: 0 32px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.navegacion::-webkit-scrollbar {
+    display: none;
+}
+
+.navegacion a {
+    color: #888;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 14px 20px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.navegacion a:hover {
+    color: #e8c84a;
+    background: rgba(232, 200, 74, 0.05);
+}
+
+/* ═══════════════════════════
+   SECCIONES
+═══════════════════════════ */
+
+.seccion {
+    padding: 80px 64px;
+    border-bottom: 1px solid #1c1c1c;
+}
+
+/* Solo la primera necesita margin-top para bajar del nav */
+.seccion:first-of-type {
+    margin-top: 160px;
+}
+
+/* ═══════════════════════════
+   TÍTULOS
+═══════════════════════════ */
+
+h1, h3 {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 52px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #f0ece0;
+    border-left: 4px solid #e8c84a;
+    padding-left: 20px;
+    margin-bottom: 32px;
+    line-height: 1;
+}
+
+/* Subtítulos de servicios */
+h4 {
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #e8c84a;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* ═══════════════════════════
+   TEXTO NORMAL
+═══════════════════════════ */
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #a09890;
+    max-width: 650px;
+}
+
+/* ═══════════════════════════
+   IMÁGENES
+═══════════════════════════ */
+
+.imgs {
+    margin-top: 40px;
+}
+
+.imgs img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid #2a2a2a;
+}
+
+/* Dos imágenes en fila */
+.imgs-doble {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.imgs-doble img {
+    max-width: 300px;
+    width: calc(50% - 10px);
+}
+
+/* ═══════════════════════════
+   SERVICIOS
+═══════════════════════════ */
+
+.servicio-bloque {
+    margin-bottom: 40px;
+    padding-left: 20px;
+    border-left: 2px solid #2a2a2a;
+    max-width: 650px;
+}
+
+.servicio-bloque:hover {
+    border-left-color: #e8c84a;
+    transition: border-color 0.2s;
+}
+
+/* ═══════════════════════════
+   CONTACTO
+═══════════════════════════ */
+
+.contacto {
+    margin-top: 48px;
+    padding: 24px;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacto a {
+    color: #e8c84a;
+    text-decoration: none;
+}
+
+.contacto a:hover {
+    text-decoration: underline;
+}
+
+/* ═══════════════════════════
+   TABLET (max 900px)
+═══════════════════════════ */
+
+@media (max-width: 900px) {
+
+    .menu-top {
+        padding: 12px 20px;
+        gap: 16px;
+    }
+
+    #logo_principal {
+        width: 70px;
+        height: 70px;
+    }
+
+    #titulo img {
+        width: 220px;
+    }
+
+    .navegacion {
+        padding: 0 20px;
+    }
+
+    .navegacion a {
+        font-size: 11px;
+        padding: 12px 12px;
+        letter-spacing: 1px;
+    }
+
+    .seccion {
+        padding: 60px 40px;
+    }
+
+    h1, h3 {
+        font-size: 40px;
+        letter-spacing: 4px;
+    }
+
+    .imgs-doble img {
+        max-width: 100%;
+        width: calc(50% - 10px);
+    }
+}
+
+/* ═══════════════════════════
+   MÓVIL (max 600px)
+═══════════════════════════ */
+
+@media (max-width: 600px) {
+
+    .menu-top {
+        padding: 10px 16px;
+        gap: 12px;
+    }
+
+    #logo_principal {
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
+    }
+
+    #titulo img {
+        width: 160px;
+    }
+
+    .navegacion {
+        padding: 0 16px;
+    }
+
+    .navegacion a {
+        font-size: 10px;
+        padding: 10px 10px;
+        letter-spacing: 0.8px;
+    }
+
+    .seccion:first-of-type {
+        margin-top: 120px;
+    }
+
+    .seccion {
+        padding: 40px 20px;
+    }
+
+    h1, h3 {
+        font-size: 32px;
+        letter-spacing: 3px;
+        padding-left: 14px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    .imgs img,
+    .imgs-doble img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .imgs-doble {
+        flex-direction: column;
+    }
+
+    .contacto {
+        max-width: 100%;
+    }
+}
+
+/* ═══════════════════════════
+   PANTALLA GRANDE (min 1400px)
+═══════════════════════════ */
+
+@media (min-width: 1400px) {
+
+    .menu-top {
+        padding: 20px 64px;
+    }
+
+    .navegacion {
+        padding: 0 64px;
+    }
+
+    .navegacion a {
+        font-size: 14px;
+        padding: 16px 28px;
+    }
+
+    .seccion {
+        padding: 100px 120px;
+    }
+
+    h1, h3 {
+        font-size: 64px;
+    }
+
+    p {
+        font-size: 17px;
+        max-width: 720px;
+    }
+
+    .imgs-doble img {
+        max-width: 380px;
+    }
+}
